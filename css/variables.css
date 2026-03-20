@@ -1,0 +1,57 @@
+/* Design Tokens */
+:root {
+  /* Color Palette — Warm, Editorial, Light */
+  --color-bg-primary: #FAF7F2;
+  --color-bg-secondary: #F0EBE3;
+  --color-bg-nav: rgba(250, 247, 242, 0.9);
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4540;
+  --color-text-tertiary: #8A8279;
+  --color-accent: #6B4C3B;
+  --color-accent-hover: #8B6651;
+  --color-accent-light: rgba(107, 76, 59, 0.08);
+  --color-border: #E2DDD5;
+  --color-border-strong: #C9C2B8;
+  --color-shield-gold: #B8943E;
+  --color-shield-gold-light: rgba(184, 148, 62, 0.1);
+  --color-success: #4A7C59;
+  --color-code-bg: #1A1A1A;
+  --color-code-text: #E8E2D9;
+
+  /* Typography — Three-Font System */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Type Scale — Fluid with clamp() */
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --text-sm:   clamp(0.8125rem, 0.75rem + 0.3vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.875rem + 0.3vw, 1.0625rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --text-xl:   clamp(1.375rem, 1.125rem + 1vw, 1.75rem);
+  --text-2xl:  clamp(1.75rem, 1.375rem + 1.5vw, 2.5rem);
+  --text-3xl:  clamp(2.25rem, 1.75rem + 2vw, 3.25rem);
+  --text-hero: clamp(2.75rem, 2rem + 3vw, 4.5rem);
+
+  /* Spacing — 8px Base Unit */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-7:  3rem;
+  --space-8:  4rem;
+  --space-9:  6rem;
+  --space-10: 8rem;
+
+  /* Layout */
+  --max-width-text: 720px;
+  --max-width-content: 1120px;
+  --nav-height: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}

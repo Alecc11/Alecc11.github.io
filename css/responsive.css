@@ -1,0 +1,60 @@
+/* Responsive Overrides */
+
+/* Mobile-first: base styles are mobile. These are progressive enhancements. */
+
+/* ── Small screens (phones in landscape, small tablets) ── */
+@media (min-width: 640px) {
+  .hero__actions {
+    flex-direction: row;
+  }
+}
+
+/* ── Medium screens (tablets) ── */
+@media (min-width: 768px) {
+  /* Nav links visible, toggle hidden — handled in components.css */
+}
+
+/* ── Large screens (desktops) ── */
+@media (min-width: 1024px) {
+  /* Grid layouts expand — handled in layout.css and sections.css */
+}
+
+/* ── Extra large screens ── */
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--space-8);
+  }
+}
+
+/* ── Print Styles ── */
+@media print {
+  .nav,
+  .hero__scroll,
+  .mobile-menu,
+  .contact__form-wrapper,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  section {
+    padding-block: 1rem;
+    break-inside: avoid;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+  }
+}
