@@ -1,6 +1,6 @@
 /* Base Element Styles */
-html {
-  overflow-x: hidden;
+html, body {
+  overflow-x: clip;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
   line-height: 1.65;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  overflow-x: hidden;
 }
 
 /* Headings — Cormorant Garamond */
