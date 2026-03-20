@@ -105,20 +105,24 @@
 
   // ── Projects Sidebar ──
   var projectsSidebar = document.getElementById('projectsSidebar');
+  var projectsSidebarCompact = document.getElementById('projectsSidebarCompact');
   var projectsSection = document.getElementById('projects');
   var projectCards = document.querySelectorAll('[id^="project-"]');
   var sidebarLinks = document.querySelectorAll('.projects__sidebar-link');
+  var compactLinks = document.querySelectorAll('.projects__sidebar-compact-link');
 
-  if (projectsSidebar && 'IntersectionObserver' in window) {
-    // Show sidebar as soon as user scrolls past the hero
+  if ((projectsSidebar || projectsSidebarCompact) && 'IntersectionObserver' in window) {
+    // Show sidebars as soon as user scrolls past the hero
     var heroSection = document.getElementById('hero');
     var sidebarVisibility = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            projectsSidebar.classList.remove('is-visible');
+            if (projectsSidebar) projectsSidebar.classList.remove('is-visible');
+            if (projectsSidebarCompact) projectsSidebarCompact.classList.remove('is-visible');
           } else {
-            projectsSidebar.classList.add('is-visible');
+            if (projectsSidebar) projectsSidebar.classList.add('is-visible');
+            if (projectsSidebarCompact) projectsSidebarCompact.classList.add('is-visible');
           }
         });
       },
@@ -143,9 +147,16 @@
         sidebarLinks.forEach(function (link) {
           link.classList.remove('is-active');
         });
+        compactLinks.forEach(function (link) {
+          link.classList.remove('is-active');
+        });
         var activeLink = document.querySelector('.projects__sidebar-link[data-project="' + id + '"]');
         if (activeLink) {
           activeLink.classList.add('is-active');
+        }
+        var activeCompact = document.querySelector('.projects__sidebar-compact-link[data-project="' + id + '"]');
+        if (activeCompact) {
+          activeCompact.classList.add('is-active');
         }
       }
     }
