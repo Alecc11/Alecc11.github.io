@@ -259,7 +259,7 @@
   display: none;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   .projects__sidebar {
     display: flex;
     flex-direction: column;
